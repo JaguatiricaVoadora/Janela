@@ -5,6 +5,7 @@ from counter import Counter
 root = tk.Tk()
 root.title("Janela")
 root.geometry("400x300")
+root.resizable(False, False)
 
 counter = Counter()
 
@@ -14,6 +15,7 @@ def on_click():
     label_var.set(f"Cliques: {count}")
 
 button = ttk.Button(root, text="Clique aqui!", command=on_click)
+button.config(width=40, padding=100)
 button.pack()
 
 label_var = tk.StringVar(value="Cliques: 0")
